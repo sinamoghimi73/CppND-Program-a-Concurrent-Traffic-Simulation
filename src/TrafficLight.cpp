@@ -7,8 +7,7 @@
 
 /* Implementation of class "MessageQueue" */
 
-template <typename T>
-T MessageQueue<T>::receive() {
+template <typename T> T MessageQueue<T>::receive() {
   /// (DONE!) : The method receive should use std::unique_lock<std::mutex> and
   // _condition.wait()
   // to wait for and receive new messages and pull them from the queue using
@@ -28,8 +27,7 @@ T MessageQueue<T>::receive() {
   return q;
 }
 
-template <typename T>
-void MessageQueue<T>::send(T &&q) {
+template <typename T> void MessageQueue<T>::send(T &&q) {
   /// (DONE!) : The method send should use the mechanisms
   // std::lock_guard<std::mutex>
   // as well as _condition.notify_one() to add a new message to the queue and
@@ -65,9 +63,7 @@ void TrafficLight::waitForGreen() {
     ;
 }
 
-TrafficLightPhase TrafficLight::getCurrentPhase() {
-  return _currentPhase;
-}
+TrafficLightPhase TrafficLight::getCurrentPhase() { return _currentPhase; }
 
 void TrafficLight::setCurrentPhase(const TrafficLightPhase &color) {
   _currentPhase = color;

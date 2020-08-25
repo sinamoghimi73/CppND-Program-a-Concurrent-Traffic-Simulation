@@ -8,7 +8,7 @@
 #include "TrafficObject.h"
 
 class Graphics {
- public:
+public:
   // constructor / desctructor
 
   // getters / setters
@@ -21,7 +21,7 @@ class Graphics {
   // typical behaviour methods
   void simulate();
 
- private:
+private:
   // typical behaviour methods
   void loadBackgroundImg();
   void drawTrafficObjects();

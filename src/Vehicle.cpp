@@ -10,7 +10,7 @@ Vehicle::Vehicle() {
   _currStreet = nullptr;
   _posStreet = 0.0;
   _type = ObjectType::objectVehicle;
-  _speed = 400;  // m/s
+  _speed = 400; // m/s
 }
 
 void Vehicle::setCurrentDestination(std::shared_ptr<Intersection> destination) {
@@ -37,7 +37,7 @@ void Vehicle::drive() {
 
   // initalize variables
   bool hasEnteredIntersection = false;
-  double cycleDuration = 1;  // duration of a single simulation cycle in ms
+  double cycleDuration = 1; // duration of a single simulation cycle in ms
   std::chrono::time_point<std::chrono::system_clock> lastUpdate;
 
   // init stop watch
@@ -71,9 +71,8 @@ void Vehicle::drive() {
       dx = x2 - x1;
       dy = y2 - y1;
       l = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (x1 - x2));
-      xv =
-          x1 + completion *
-                   dx;  // new position based on line equation in parameter form
+      xv = x1 + completion *
+                    dx; // new position based on line equation in parameter form
       yv = y1 + completion * dy;
       this->setPosition(xv, yv);
 
@@ -131,5 +130,5 @@ void Vehicle::drive() {
       // reset stop watch for next cycle
       lastUpdate = std::chrono::system_clock::now();
     }
-  }  // eof simulation loop
+  } // eof simulation loop
 }

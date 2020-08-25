@@ -31,7 +31,7 @@ void createTrafficObjects_Paris(
   intersections.at(5)->setPosition(3070, 680);
   intersections.at(6)->setPosition(2800, 1400);
   intersections.at(7)->setPosition(400, 1100);
-  intersections.at(8)->setPosition(1700, 900);  // central plaza
+  intersections.at(8)->setPosition(1700, 900); // central plaza
 
   // create streets and connect traffic objects
   int nStreets = 8;

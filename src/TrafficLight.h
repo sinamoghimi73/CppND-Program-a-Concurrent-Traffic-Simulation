@@ -22,13 +22,12 @@ class Vehicle;
 // Also, there should be an std::condition_variable as well as an std::mutex as
 // private members.
 
-template <class T>
-class MessageQueue {
- public:
+template <class T> class MessageQueue {
+public:
   T receive();
   void send(T &&q);
 
- private:
+private:
   std::mutex _mutex;
   std::condition_variable _condition;
   std::deque<T> _queue;
@@ -44,7 +43,7 @@ class MessageQueue {
 // value.
 
 class TrafficLight : public TrafficObject {
- public:
+public:
   // constructor / desctructor
   TrafficLight();
 
@@ -61,7 +60,7 @@ class TrafficLight : public TrafficObject {
   void setCurrentPhase(const TrafficLightPhase &color);
   void toggleColor(const TrafficLightPhase &color);
 
- private:
+private:
   // typical behaviour methods
   /// cycleThroughPhases method added!
   void cycleThroughPhases();

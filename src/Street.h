@@ -8,7 +8,7 @@ class Intersection;
 
 class Street : public TrafficObject,
                public std::enable_shared_from_this<Street> {
- public:
+public:
   // constructor / desctructor
   Street();
 
@@ -24,11 +24,11 @@ class Street : public TrafficObject,
   // miscellaneous
   std::shared_ptr<Street> get_shared_this() { return shared_from_this(); }
 
- private:
-  double _length;  // length of this street in m
+private:
+  double _length; // length of this street in m
   std::shared_ptr<Intersection> _interIn,
-      _interOut;  // intersections from which a vehicle can enter (one-way
-                  // streets is always from 'in' to 'out')
+      _interOut; // intersections from which a vehicle can enter (one-way
+                 // streets is always from 'in' to 'out')
 };
 
 #endif
